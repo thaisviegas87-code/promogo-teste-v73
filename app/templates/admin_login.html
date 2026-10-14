@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PromoGo · Acesso administrativo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,Arial,sans-serif;color:#17132f}body{background:#f5e9f2}
+.login-page{min-height:100vh;padding:38px 28px;display:grid;place-items:center;background:linear-gradient(135deg,#6333a2 0%,#c83d8c 48%,#ff9a63 100%)}
+.login-shell{width:min(1480px,100%);min-height:820px;background:#fff;border-radius:30px;overflow:hidden;display:grid;grid-template-columns:1.03fr .97fr;box-shadow:0 28px 80px rgba(50,15,80,.30)}
+.visual{position:relative;overflow:hidden;min-height:820px;background:#260843}
+.visual-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:58% center}
+.visual-overlay{position:absolute;inset:0;background:linear-gradient(115deg,rgba(38,4,67,.96) 0%,rgba(80,10,105,.78) 35%,rgba(191,26,112,.50) 66%,rgba(255,105,19,.54) 100%)}
+.visual-overlay:after{content:"";position:absolute;width:780px;height:780px;border:100px solid rgba(255,137,31,.28);border-radius:50%;right:-350px;top:90px}
+.visual-overlay:before{content:"";position:absolute;width:690px;height:260px;left:-170px;bottom:-45px;background:linear-gradient(110deg,rgba(112,19,183,.15),rgba(255,106,13,.78));transform:rotate(-17deg);border-radius:40%}
+.visual-content{position:relative;z-index:2;padding:96px 72px;color:#fff;height:100%;display:flex;flex-direction:column}
+.visual-kicker{font-size:17px;font-weight:700;letter-spacing:.2px;opacity:.95;margin-bottom:44px}
+.visual-title{font-family:Poppins,Inter,sans-serif;font-size:58px;line-height:1.02;letter-spacing:-2.5px;margin:0 0 48px;max-width:570px;font-weight:600}
+.visual-title strong{color:#ff9417;font-weight:800}
+.benefits{display:grid;gap:30px;max-width:430px}.benefit{display:flex;gap:18px;align-items:center;font-size:17px;line-height:1.3}.benefit-icon{width:43px;height:43px;border:2px solid rgba(255,255,255,.9);border-radius:12px;display:grid;place-items:center;font-size:21px;flex:none}
+.brand-bottom{margin-top:auto;display:flex;align-items:center;gap:12px;font-size:13px;font-weight:600;opacity:.85}
+.access{background:#fff;padding:70px 76px;display:flex;flex-direction:column;justify-content:center}
+.logo{display:block;width:min(430px,90%);height:auto;margin:0 auto 7px}
+.access-title{text-align:center;color:#2b174e;font-family:Poppins;font-size:19px;font-weight:700;margin:0 0 34px}
+.form-box{width:min(520px,100%);margin:0 auto;background:#fbfbfd;border-radius:20px;padding:32px 40px 30px;box-shadow:0 10px 30px rgba(31,16,52,.035)}
+.form-title{font-family:Poppins;font-size:22px;font-weight:700;margin:0 0 25px;color:#17132f}.field{margin-bottom:20px}.field label{display:block;font-weight:700;font-size:15px;margin:0 0 9px}.input-wrap{position:relative}.input-wrap .icon{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:22px;color:#191832}.input-wrap input{width:100%;height:56px;border:1px solid #d8dce6;border-radius:12px;background:#fff;padding:0 48px;font:inherit;font-size:16px;outline:none;color:#17132f}.input-wrap input:focus{border-color:#6c2699;box-shadow:0 0 0 4px rgba(108,38,153,.10)}.eye{position:absolute;right:16px;top:50%;transform:translateY(-50%);border:0;background:transparent;color:#27233c;font-size:20px;cursor:pointer;padding:3px}
+.submit{width:100%;height:56px;border:0;border-radius:12px;background:linear-gradient(90deg,#4c147b,#541982);color:#fff;font:inherit;font-weight:800;font-size:17px;cursor:pointer;box-shadow:0 8px 20px rgba(75,20,123,.18)}.submit:hover{filter:brightness(1.04)}
+.help{text-align:center;color:#7a7b8c;font-size:13px;margin-top:22px}.err{background:#fff0f3;color:#c72b42;border:1px solid #ffd2da;border-radius:12px;padding:12px 14px;font-size:13px;margin-bottom:18px}
+.companies{display:flex;justify-content:center;align-items:center;margin:42px auto 0;width:min(430px,100%)}.companies img{width:330px;max-width:100%;height:auto;object-fit:contain}
+@media(max-width:1000px){.login-page{padding:0}.login-shell{min-height:100vh;border-radius:0;grid-template-columns:1fr}.visual{display:none}.access{min-height:100vh;padding:45px 24px}.logo{width:min(410px,90%)}.form-box{padding:28px 24px}}
+@media(max-width:520px){.access{padding:35px 16px}.form-box{padding:25px 18px}.companies{margin-top:28px}.companies img{width:280px}}
+</style>
+</head>
+<body>
+<div class="login-page">
+  <div class="login-shell">
+    <section class="visual">
+      <img class="visual-photo" src="/static/login_campo.png" alt="Equipe PromoGo em campo">
+      <div class="visual-overlay"></div>
+      <div class="visual-content">
+        <div class="visual-kicker">PromoGo · Gestão inteligente de promotores</div>
+        <h1 class="visual-title">Sua equipe em campo,<br><strong>sob controle.</strong></h1>
+        <div class="benefits">
+          <div class="benefit"><span class="benefit-icon">⌖</span><span>Check-in e check-out<br>com geolocalização</span></div>
+          <div class="benefit"><span class="benefit-icon">☑</span><span>Gestão de ações<br>e promotoras</span></div>
+          <div class="benefit"><span class="benefit-icon">↗</span><span>Relatórios em<br>tempo real</span></div>
+          <div class="benefit"><span class="benefit-icon">♧</span><span>Mais controle<br>para sua operação</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="access">
+      <img class="logo" src="/static/promogo_logo.png" alt="PromoGo — Gestão inteligente de promotores">
+      <p class="access-title">Acesso administrativo</p>
+      <div class="form-box">
+        {% if erro %}<div class="err">{{erro}}</div>{% endif %}
+        <h2 class="form-title">Entre na sua conta</h2>
+        <form method="post" action="/login">
+          <div class="field">
+            <label for="usuario">Usuário</label>
+            <div class="input-wrap"><span class="icon">♙</span><input id="usuario" name="usuario" placeholder="Digite seu usuário" autocomplete="username" required></div>
+          </div>
+          <div class="field">
+            <label for="senha">Senha</label>
+            <div class="input-wrap"><span class="icon">♧</span><input id="senha" name="senha" type="password" placeholder="Digite sua senha" autocomplete="current-password" required><button type="button" class="eye" onclick="togglePassword()" aria-label="Mostrar senha">◉</button></div>
+          </div>
+          <button class="submit" type="submit">Entrar&nbsp;&nbsp; →</button>
+        </form>
+        <div class="help">Esqueceu sua senha? Fale com o administrador do sistema.</div>
+      </div>
+      <div class="companies"><img src="/static/oba_top.png" alt="OBA Promoções e TOP agência"></div>
+    </section>
+  </div>
+</div>
+<script>function togglePassword(){const i=document.getElementById('senha');i.type=i.type==='password'?'text':'password'}</script>
+</body>
+</html>

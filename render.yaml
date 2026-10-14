@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: promogo-teste-v73
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: promogo-db-teste-v73
+          property: connectionString
+      - key: PROMOGO_SECRET_KEY
+        generateValue: true
+      - key: PROMOGO_HTTPS_ONLY
+        value: "true"
+      - key: PROMOGO_SEED_DEMO
+        value: "true"
+
+databases:
+  - name: promogo-db-teste-v73
+    databaseName: promogo_teste_v73
+    user: promogo_teste_v73
+    plan: free

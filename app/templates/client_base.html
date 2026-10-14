@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{% block title %}PromoGo · Portal do cliente{% endblock %}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--purple:#4b167d;--purple2:#741bd1;--deep:#160628;--orange:#ff7a00;--pink:#e90082;--ink:#0d1530;--muted:#68789c;--bg:#f5f7fb;--line:#e8eaf2;--green:#20a95b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif}.client-app{min-height:100vh}.client-header{height:76px;background:linear-gradient(110deg,#19072c,#42105f 55%,#74104f);display:flex;align-items:center;justify-content:space-between;padding:0 34px;color:#fff;box-shadow:0 8px 30px #26103a22}.client-brand{display:flex;align-items:center;gap:18px}.client-logo{width:245px;max-width:42vw;height:auto}.client-divider{width:1px;height:34px;background:#ffffff40}.client-label{font-size:13px;color:#eadff1;font-weight:700}.client-nav{display:flex;align-items:center;gap:8px}.client-nav a{color:#fff;text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:700;font-size:14px}.client-nav a:hover,.client-nav a.active{background:#ffffff18}.client-logout{border:1px solid #ffffff55}.client-main{max-width:1500px;margin:0 auto;padding:34px 34px 55px}.eyebrow{color:var(--orange);font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.5px}.page-title{font-family:Poppins;font-size:40px;line-height:1.08;margin:4px 0 6px;letter-spacing:-1.5px}.page-sub{font-size:17px;color:var(--muted);margin:0}.detail-top{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}.btn{border:0;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:12px;padding:13px 19px;font-weight:800;cursor:pointer;font-family:inherit}.btn-light{background:#fff;border:1px solid #dfe4ef;color:var(--ink)}.btn-purple{background:linear-gradient(135deg,#52107d,#351052);color:#fff}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.metrics-six{grid-template-columns:repeat(6,1fr)}.metric{background:#fff;border:1px solid #edf0f5;border-radius:20px;padding:21px 22px;box-shadow:0 8px 30px rgba(34,22,60,.04)}.metric-icon{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;font-size:20px;margin-bottom:12px}.mi-purple{background:#eee5ff;color:#7622db}.mi-orange{background:#fff0df;color:#ff7200}.mi-pink{background:#ffe5f3;color:#e90082}.mi-green{background:#e7f8ed;color:#189b51}.metric-value{font-family:Poppins;font-size:29px;font-weight:800;line-height:1}.metric-label{font-size:13px;color:var(--muted);margin-top:5px}.panel{background:#fff;border:1px solid #edf0f5;border-radius:20px;box-shadow:0 8px 30px rgba(34,22,60,.04)}.panel-title{font-weight:800;font-size:15px;color:#34466d}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}.section{margin-top:20px}.table{width:100%;border-collapse:collapse;font-size:13px}.table th{color:#74819a;text-transform:uppercase;font-size:11px;letter-spacing:.7px;text-align:left;padding:12px;border-bottom:1px solid #edf0f5}.table td{padding:14px 12px;border-bottom:1px solid #edf0f5}.legend-row{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #edf0f5;padding:13px 0;font-size:14px}.muted{color:var(--muted)}.mobile-nav{display:none}
+@media(max-width:1100px){.metrics-six{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){.client-header{height:auto;min-height:72px;padding:12px 16px;gap:12px}.client-brand{gap:12px}.client-logo{width:135px}.client-divider,.client-label{display:none}.client-nav{gap:2px}.client-nav a{font-size:12px;padding:8px}.client-main{padding:24px 16px 40px}.page-title{font-size:30px}.detail-top{align-items:flex-start;flex-direction:column}.metrics-six{grid-template-columns:1fr 1fr}.grid2{grid-template-columns:1fr}.table-wrap{overflow-x:auto}.table{min-width:680px}}
+</style>
+{% block head %}{% endblock %}
+</head>
+<body>
+<div class="client-app">
+<header class="client-header">
+  <div class="client-brand"><img class="client-logo" src="/static/oba_top.png" alt="OBA Promoções e TOP"><div class="client-divider"></div><div class="client-label">Portal do cliente</div></div>
+  <nav class="client-nav"><a href="/cliente">Início</a><a href="/cliente#eventos">Eventos</a><a href="/cliente#resultados">Resultados</a><a class="client-logout" href="/cliente/logout">Sair</a></nav>
+</header>
+<main class="client-main">{% block content %}{% endblock %}</main>
+</div>
+</body>
+</html>
